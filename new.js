@@ -3,9 +3,9 @@
 function newFunction(num = 1, num2 = 1) {
     return num + num2; //return value
 }
-console.log(newFunction()); //call function
+console.log(newFunction()); //call function with defalut value
 let reciveFucntion = newFunction(); // accessible in variable
-console.log(newFunction); // print function
+console.log(newFunction(10, 16)); // print function with user value
 let a = 1; //global scope variable 
 if (1 === a) {
     let b = 20; //block scope variable
@@ -16,9 +16,10 @@ else {
     console.log('error');
 }
 console.log(a); //global scope variable accessible in block
-// console.log(b); variable in block scope so it will not be accessible outside the block
-//arrow function 
+// // console.log(b); variable in block scope so it will not be accessible outside the block
+// //arrow function 
 let playerName = (name = 'guest123') => {
     console.log(name);
 };
-playerName('sahil00');
+playerName(); // print defalut value
+playerName('sahil00'); // add user value
